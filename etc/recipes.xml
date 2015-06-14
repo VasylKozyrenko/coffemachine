@@ -1,0 +1,18 @@
+<ingredients>
+    <water/>
+    <coffee/>
+    <milk/>
+    <cream>
+        <milk>1.0</milk>
+    </cream>
+    <chocolate/>
+    <whiskey/>
+    <espresso>
+        <coffee>1.0</coffee>
+        <water>1.0</water>
+    </espresso>
+    <americano>
+        <espresso>1.0</espresso>
+        <water>1.0</water>
+    </americano>
+</ingredients>
