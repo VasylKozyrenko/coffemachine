@@ -1,8 +1,6 @@
 <?php
 
-require 'CoffeeMachine.php';
-require 'Ingredient.php';
-require 'RecipesProvider.php';
+require __DIR__ . '\vendor\autoload.php';
 
 $coffeeMachine = new \CoffeeMachine(new \RecipesProvider('etc/recipes.xml'));
 $coffeeMachine->loadIngredient('water', 2);

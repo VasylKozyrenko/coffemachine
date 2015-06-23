@@ -2,10 +2,19 @@
 
 class RecipesProvider {
 
+    /**
+     * @var string
+     */
     protected $recipes;
 
+    /**
+     * @var string
+     */
     protected $fileName;
 
+    /**
+     * @var string
+     */
     protected $recipesNode;
 
     public function __construct($fileName, $recipesNode = 'ingredients')
@@ -16,6 +25,11 @@ class RecipesProvider {
         $this->recipes = $this->convert($xml);
     }
 
+    /**
+     * @param string $name
+     * @return mixed
+     * @throws InvalidArgumentException
+     */
     public function getRecipe($name)
     {
         if (!isset($this->recipes[$name])) {
@@ -26,6 +40,10 @@ class RecipesProvider {
         return $this->recipes[$name];
     }
 
+    /**
+     * @param SimpleXMLElement $xml
+     * @return mixed
+     */
     protected function convert(\SimpleXMLElement $xml)
     {
         return $this->xmlToArray($xml)[$this->recipesNode];

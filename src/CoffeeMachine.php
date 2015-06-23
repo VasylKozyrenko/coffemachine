@@ -29,6 +29,11 @@ class CoffeeMachine
         $this->loadedIngredients[$name] = $totalQuantity;
     }
 
+    /**
+     * @param string $name
+     * @param float $quantity
+     * @throws Exception
+     */
     protected function useIngredient($name, $quantity = 1.0)
     {
         if (!isset($this->loadedIngredients[$name])) {
@@ -41,6 +46,11 @@ class CoffeeMachine
         $this->loadedIngredients[$name] = $remainingQuantity;
     }
 
+    /**
+     * @param string $name
+     * @param float $quantity
+     * @return Ingredient
+     */
     public function make($name, $quantity = 1.0)
     {
         $ingredients = $this->configuration->getRecipe($name);

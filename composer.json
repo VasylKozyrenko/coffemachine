@@ -1,0 +1,12 @@
+{
+    "name": "VasylKozyrenko/coffemachine",
+    "description": "Home Work 3",
+    "type": "project",
+    "version": "1.0.0",
+    "require": {
+        "php": "~5.5.0|~5.6.0"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
